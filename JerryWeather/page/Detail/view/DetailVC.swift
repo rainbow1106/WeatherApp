@@ -129,6 +129,7 @@ final class DetailVC: UIViewController,  DetailDisplayLogic{
                     cnt = uCnt
                 }
                 self.pageCntr.numberOfPages = cnt
+                self.pageCntr.currentPage = self.viewIdx
                 
             }
             
