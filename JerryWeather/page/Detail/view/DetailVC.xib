@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="JerryWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="colV" destination="gXI-Mr-0Mn" id="vHx-86-Cw3"/>
+                <outlet property="listBTN" destination="EBT-It-VMz" id="geE-XB-bK0"/>
+                <outlet property="pageCntr" destination="D2w-US-sZg" id="arc-a0-NaM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-Mr-0Mn">
+                    <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FzS-8Q-qyL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVF-9L-BJ2" userLabel="bot">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBT-It-VMz">
+                            <rect key="frame" x="331" y="0.0" width="63" height="50"/>
+                            <state key="normal" title="목록으로">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-US-sZg">
+                            <rect key="frame" x="187.5" y="0.0" width="39" height="50"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="EBT-It-VMz" secondAttribute="bottom" id="7fA-EZ-eco"/>
+                        <constraint firstAttribute="trailing" secondItem="EBT-It-VMz" secondAttribute="trailing" constant="20" id="NZc-ya-ikI"/>
+                        <constraint firstItem="EBT-It-VMz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D2w-US-sZg" secondAttribute="trailing" constant="5" id="YxX-gq-Aot"/>
+                        <constraint firstItem="D2w-US-sZg" firstAttribute="centerX" secondItem="zVF-9L-BJ2" secondAttribute="centerX" id="a0B-H7-912"/>
+                        <constraint firstItem="D2w-US-sZg" firstAttribute="top" secondItem="zVF-9L-BJ2" secondAttribute="top" id="fJJ-Uj-bru"/>
+                        <constraint firstAttribute="bottom" secondItem="D2w-US-sZg" secondAttribute="bottom" id="g4M-S2-WLO"/>
+                        <constraint firstAttribute="height" constant="50" id="jd3-lK-Hn9"/>
+                        <constraint firstItem="EBT-It-VMz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zVF-9L-BJ2" secondAttribute="leading" constant="20" id="pMx-ki-iCg"/>
+                        <constraint firstItem="EBT-It-VMz" firstAttribute="top" secondItem="zVF-9L-BJ2" secondAttribute="top" id="uHV-iL-UxV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gXI-Mr-0Mn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BYe-Ha-YjL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gXI-Mr-0Mn" secondAttribute="trailing" id="bcC-2M-Ix5"/>
+                <constraint firstItem="gXI-Mr-0Mn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eIZ-mj-wDp"/>
+                <constraint firstItem="zVF-9L-BJ2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hhG-uM-4cd"/>
+                <constraint firstItem="zVF-9L-BJ2" firstAttribute="top" secondItem="gXI-Mr-0Mn" secondAttribute="bottom" id="jbq-Jc-xTH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zVF-9L-BJ2" secondAttribute="bottom" id="pMl-Y4-Osl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zVF-9L-BJ2" secondAttribute="trailing" id="zIp-k6-r9P"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
